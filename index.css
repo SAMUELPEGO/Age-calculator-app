@@ -1,0 +1,155 @@
+:root {
+--Purple: hsl(259, 100%, 65%);
+--Lightred: hsl(0, 100%, 67%);
+--White: hsl(0, 0%, 100%);
+--Offwhite: hsl(0, 0%, 94%);
+--Lightgrey: hsl(0, 0%, 86%);
+--Smokeygrey: hsl(0, 1%, 44%);
+--Offblack: hsl(0, 0%, 8%);
+--color_error_p: hsl(0, 0%, 47%);
+--color_error_border: hsl(0, 0%, 80%);
+--color_error_hover: var(--Purple);
+
+}
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    
+}
+
+/* containers style */
+body {
+    display: flex;
+    background-color: hsl(0, 0%, 94%);
+    justify-content: center;
+}
+.container {
+    width: 355px;
+    height: 550px;
+    margin: 20px 10px 0 10px;
+    padding: 20px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content:space-between;
+    background: hsl(0, 0%, 100%);
+    border-radius: 15px 15px 100px 15px;
+}
+
+.container div,ul {
+    width: 100%;
+}
+.inputs {
+    display: flex; 
+    justify-content: space-between;
+    height: 85px;
+    
+}
+.inputs div{
+    width: 105px; 
+   
+}
+.inputs span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: hsl(0, 100%, 67%);
+}
+
+/* inputs style */
+
+.inputs p {
+    color: var(--color_error_p);
+    font-weight: 600;
+    
+}
+input {
+    width: 100%;
+    padding: 17px 0 17px 15px;
+    box-sizing: border-box;
+    margin:5px 0;
+    border: 1px solid var(--color_error_border);
+    border-radius: 10px;
+    font-size: 25px;
+    outline: none;
+    cursor: pointer;
+    color: #000;
+    font-weight: 600;
+   
+}
+input::placeholder {
+    font-size: 25px;
+    color: hsl(0, 1%, 44%);
+    font-weight: 600;
+   
+}
+input:hover {
+    border-color: var(--Purple);
+}
+
+/* button style */
+.button {
+    position: relative;
+    margin-top: 50px;
+}
+button {
+    position: absolute;
+    border:none;
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+    background-color: var(--Purple);
+    top: -45px;
+    left: calc(100% - 50% - 45px);
+    cursor: pointer;
+}
+button:hover {
+    background-color: black;
+}
+button:active {
+    box-shadow: 5px 5px 10px;
+}
+hr {
+   opacity: .4;
+}
+
+/* ul style */
+ul {
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+}
+ul span {
+    color: var(--Purple);
+   
+}
+
+/* making responsive */
+@media only screen and (min-width:800px) {
+    .container {
+        box-sizing: border-box;
+        width: 700px;
+        height: 550px;
+        margin: 0;
+        margin-top: calc((100vh - 555px)/2);
+       
+    }
+    .inputs  {
+        justify-content:flex-start;
+    }
+    .inputs div {
+        margin-left: 30px;
+        width: 150px;
+    }
+    ul {
+        font-size: 70px;
+    }
+    hr {
+        width: 90%;
+    }
+    button {
+        left: calc(90% - 45px);
+    }
+
+}
